@@ -31,10 +31,6 @@ export default function Qrreader() {
       };
    }, []);
 
-   const reload = () => {
-      window.location.reload();
-   };
-
    return (
       <div className="    bg-cyan-950 p-3 min-h-screen h-auto">
          <NavLink
@@ -42,7 +38,7 @@ export default function Qrreader() {
             to="/">
             CREATE QR CODE
          </NavLink>
-         <div className=" flex flex-col justify-center items-center lg:my-[2%]  my-[50%]">
+         <div className=" flex flex-col justify-center items-center lg:my-[2%]  my-[20%]">
             <h1 className="  text-white text-shadow-sm text-center font-semibold lg:text-[2rem] text-[1.4rem] my-4 font-Inter ">
                {" "}
                SCAN YOUR QR CODE HERE
@@ -57,15 +53,11 @@ export default function Qrreader() {
                            {result}
                         </a>
                      </p>
-                     <button onClick={reload} className=" font-Inter font-medium">
-                        {" "}
-                        Scan Another QR
-                     </button>
                   </div>
                ) : (
                   <div
                      id="reader"
-                     className="lg:w-[120vh]  w-[50vh] text-slate-400 rounded-xl font-Inter"></div>
+                     className="lg:w-[120vh]  w-[40vh] text-slate-400 rounded-xl font-Inter"></div>
                )}
             </div>
          </div>
